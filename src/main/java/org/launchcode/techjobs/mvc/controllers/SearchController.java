@@ -46,7 +46,7 @@ public class SearchController {
             model.addAttribute("columns", ListController.columnChoices);
             model.addAttribute("title", "search for '" + searchTerm + "'");
             return "search";
-
+//
 
         }
 
