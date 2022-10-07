@@ -41,7 +41,15 @@ public class JobData {
         // Bonus mission; normal version returns allJobs
         return new ArrayList<>(allJobs);
     }
-
+    public static ArrayList<String> findAllByName() {
+        //load data, if not already loaded
+        loadData();
+        List<String> allJobsByName = new ArrayList<>();
+        for (Job j :allJobs) {
+            allJobsByName.add(j.getName());
+        }
+        return (ArrayList<String>)  allJobsByName;
+    }
     /**
      * Returns the results of searching the Jobs data by field and search term.
      *
